@@ -1,101 +1,231 @@
+* {box-sizing: border-box;}
+
+body.dark {
+    background-color: #292c35;
+    
+} 
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: white;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  display: flex;
+}
+
+.checkbox-label .ball {
+  background-color: darkgray;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+} 
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: white;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  display: flex;
+}
+
+.checkbox-label .ball {
+  background-color: darkgray;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+} 
+
 body {
-    background-color: black;
-    color: white;
     font-family: 'Bebas Neue', cursive;
-}
-
-#right-side {
-    margin-left:auto;
-}
-
-.icon {
-    width:30px;
-    height:auto;
-    vertical-align: middle;
-}
-#amount {
-    font-size: 25px;
+    background-color: darkgray;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background 0.2s linear;
 }
 
 .logo {
-    margin: 20px 0px 20px 0px;
+    margin: 16px 0px 16px 0px;
 }
 
-#movie-list {
-    display:flex;
+#wanted-list {
+    display: flex;
     justify-content: center;
+    
 }
 
-#movie-list img {
-    width: 100px;
+.policeLights {
+    height: 100;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  
+}
+
+#wanted-list img {
     height: auto;
     margin: 7px;
+    width:440px; 
+    overflow:hidden; 
+    float:left; 
+    display:grid;
 }
 
-#movie-list img:hover {
+#wanted-list img:hover {
     filter: drop-shadow(0 0 0.75rem white)
 }
 
-#movie-info {
+#wanted-person-info {
     display: flex;
     height: 400px;
     justify-content: center;
     margin-top: 25px;
 }
 
-#movie-info img {
-    height: auto;
+#detail-image img {
+    height: 400;
     margin: 7px;
-    filter: drop-shadow(0 0 1em #c93642)
+    filter: drop-shadow(0 0 1em #808080)
 }
 
-#movie-info div {
+#wanted-person-info div {
     width: 500px;
     margin-left: 20px;
 }
 
-#movie-info div p {
+#wanted-person-info div p {
     font-family: 'Nanum Gothic', sans-serif;
 }
 
-form {
-    width:200px;
+img#fugitive-wanted {
+    width: 100px;
+    height: 100px;
+    margin: 7px;
+    
 }
 
-button {
-    border: 0;
-    width:200px;
-    color: black;
-    background: white; 
+#comment {
+    border-color: white;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
     padding: 10px;
     border-radius: 5px;
     font-size: 20px;
-    font-family: 'Bebas Neue', cursive;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-input[type=text] {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+form {
+    width:200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#comment-section {
+    text-align: center;
+}
+
+#tip-line {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#record-update {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#form-comments {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form#rewardField {
     display:inline-block;
     border: 0;
     width:100%;
-    color: black;
-    background: white; 
     padding: 10px;
     border-radius: 5px;
     font-size: 20px;
-    font-family: 'Bebas Neue', cursive;
-    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form#crimeField {
+    display:inline-block;
+    border: 0;
+    width:100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form#tips {
+    display:inline-block;
+    border: 0;
+    width:100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 input[type=submit] {
     display:inline-block;
     border: 0;
-    width:100%;
+    width:60%;
     color: black;
     background: white; 
     padding: 10px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Bebas Neue', cursive;
     box-sizing: border-box;
     margin-top: 10px;
 }
+

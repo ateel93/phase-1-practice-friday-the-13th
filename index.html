@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Crystal Lake Fan Club</title>
+        <title>FBI Wanted</title>
         <link rel="stylesheet" type="text/css" href="./style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -9,37 +9,85 @@
     </head>
     <body>
         <div id="top">
-            <img class="logo" src="assets/f13-logo.png" /> 
-        </div>
+            <img class="logo" src="assets/wantedbyfbi.jpg" /> 
+            <p></p>
+            <!-- <button id="test">TestDarkLight</button> -->
+            <!-- <img src="assets/light-dark.png" id="icon"/> -->
+            <h5>Light/Dark Mode</h5>
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                    <span class="ball"></span>
+                </label>
         <hr/>
-        <nav id="movie-list">
-            
-        </nav>
+        <!-- <div id="filter-attribute">
+            <button id="filter">Filter by attribute</button>
+                </div>
+                <div id="filter-nav">
+                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('Reward')"> Reward</button>
+                    <button class="btn" onclick="filterSelection('Height')"> Height</button>
+            </div> -->
+        <!-- top nav display -->
+            <nav id="wanted-list">
+                
+            </nav>
+         </div>
+        <hr/>
+       
+        <!-- specific display for each person -->
 
-        <div id="movie-info">
+        <div id="wanted-person-info">
             <img id="detail-image" src="" />
             <div>
-                <h1 id="title">Title</h1>
-                <h3 id="year-released">Year Released</h5>
-                <p id="description">
-                    Description
+                <h1 id="name">Name</h1>
+                <p id="height"></p>
+                <p id="reward">Reward</p>
+                <p id="crime"></p>
+                <h2 id="armed"></h2>
                 </p>
-                <button id="watched">Watched</button>
-                <p>
-                    <img class="icon" src="./assets/blood-drop.png"/>x
-                    <span id="amount">0</span>
-                </p>
+                <h3 id="Contact">Contact information</h3>
+                <h4 id="office"></h4>
+                <h4 id="contact-number"></h4>
+
             </div>
+            <!-- <img id="fugitive-wanted" src="" /> -->
+            <div>
+                <form id="formNewRecord">
+                    <h3 id="new-record">Submit New Record</h3> 
+                    <input id="nameField" name="nameField" placeholder="New Name Submission" />
+                    <input id="heightField" name="heightField" placeholder="New Height Submission" />
+                    <input id="imageField" name="imageField" placeholder="New Image Submission" />
+                    <input id="rewardField" name="rewardField" placeholder="New Reward" />
+                    <input id="crimeField" name="crimeField" placeholder="New Crime(s)" />
+                    <input id="submit" type="submit" value="Submit"></input>
+                </form>
 
+                <form id="record-update">
+                    <h3 id="record-updateText">Update Existing Record</h3> 
+                    <input id="rewardUpdateField" name="rewardUpdateField" placeholder="Update Existing Reward" />
+                    <input id="crimeUpdateField" name="crimeUpdateField" placeholder="Update Existing Crime(s)" />
+                    <input id="submit" type="submit" value="Submit"></input>
+                </form>
 
-            <form id="blood-form">
-                <label for="blood-amount">Blood amount</label>
-                <input id="blood-amount" type="text" placeholder="Number of drops ..."/>
+                
 
-                <input type="submit" value="Add Blood"></button>
-            </form>
-            
+            </div>
+            <div id="form-comments">
+
+                <img class="policeLights" src="assets/police-lights.gif" /> 
+
+                <form id="tips-form">
+                    <h3 id="tip-line">Heard or Seen Anything?</h3> 
+                    <input id="tips" type="text" placeholder="Submit Anonymous Tip"/>
+                    <input id="submit" type="submit" value="Submit"></input>
+                </form>
+
+                <h3 id="comment-section">Comments:</h3>
+                    <ul id="comment">
+                    </ul>
+            </div>
         </div>
+
     </body>
 
 </html>
